@@ -6,6 +6,9 @@
 .custom-div:hover {
   /* background-color: #309286; */
   cursor: grab;
+  background-color: #081b31;
+  transform: scale(1.1);
+  border: 5px solid black;
 }
 nav {
   height: 100px;
@@ -96,4 +99,61 @@ img {
   color: #ffffcc;
   font-size: larger;
   font-weight: bold;
+}
+
+
+@media (max-width:700px) {
+  nav {
+    height: 80px;
+    background-color: #b4e9e2;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+  }
+  
+  .shape-container {
+    height: 450px;
+    background-color: #32dbc6;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+.circle {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+  .score {
+    height: 30px;
+    background-color: #309286;
+    display: flex;
+    /* justify-content:; */
+    align-items: center;
+  }
+
+  .output {
+    height: 73px;
+    background-color: #155c96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .display-message {
+    background-color: #add8e6;
+    color: #155c96;
+    padding: 10px;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
