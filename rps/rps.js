@@ -1,12 +1,14 @@
 // creating variables for scores
-let myScore = document.querySelector("#myScore");
-let compScore = document.querySelector("#compScore");
+var y=document.querySelector("#myScore");
+var c=document.querySelector("#compScore");
+var myScoreText = document.getElementById("myScore").textContent.trim();
+var compScoreText = document.getElementById("compScore").textContent.trim();
+
+var myScore = parseInt(myScoreText.match(/\d+/)[0]);
+var compScore = parseInt(compScoreText.match(/\d+/)[0]);
 
 
 // exact score counts
-myScoreValue=myScore.innerText;
-compScoreValue=compScore.innerText;
-
 
 //creating variables for images(will be used after the selection)
 let chRock = document.querySelector("#rock");
@@ -34,6 +36,12 @@ const compInput = () => {
     return ch2;
 }
 
+// funtion to update the displayed scores
+const updateScoresDisplay = () => {
+    document.getElementById("myScore").innerHTML = "<pre><b>You: " + myScore + "</b></pre>";
+    document.getElementById("compScore").innerHTML = "<pre><b>Computer: " + compScore + "</b></pre>";
+}
+
 
 // function with game rules
 const compareUserInput = (userChoice) => {
@@ -52,14 +60,16 @@ const compareUserInput = (userChoice) => {
         scoreDisplay.textContent = "You win !! :)";
         scoreDisplay.classList.remove("failure", "tie");
         scoreDisplay.classList.add("success");
-        myScore.innerText++;
+        myScore++;
+        
     } else {
         console.log("You Lose !! :(");
         scoreDisplay.textContent = "You Lose !! :(";
         scoreDisplay.classList.remove("tie", "success");
         scoreDisplay.classList.add("failure");
-        compScore.innerText++;
+        compScore++;
     }
+    updateScoresDisplay();
 };
 
 

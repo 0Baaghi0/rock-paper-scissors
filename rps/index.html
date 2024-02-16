@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="rps.css">
 </head>
+
 <body>
     <nav>
         <h1><b>Rock Paper Scissor</b></h1>
@@ -23,11 +25,19 @@
         </div>
     </div>
 
-    <div class="score">
+    <!-- <div class="score">
         <h1><b><pre>You: <span id="myScore">0</span>           Computer: <span id="compScore">0</span></pre></b></h1>
+    </div> -->
+
+    <div class="score">
+        <ul>
+
+            <li id="myScore"><pre><b>You: 0</b></pre></li>
+            <li id="compScore"><pre><b>Computer: 0</b></pre></li>
+
+        </ul>
     </div>
 
-    
     <div class="output">
         <div class="custom-div display-message">
             <span id="output1"><b>Pick Your Move</b></span>
@@ -39,4 +49,5 @@
 
     <script src="rps.js"></script>
 </body>
+
 </html>
